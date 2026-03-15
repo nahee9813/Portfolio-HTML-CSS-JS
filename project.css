@@ -1,0 +1,148 @@
+body {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.grid-project {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* two equal columns */
+    gap: 20px;               /* space between columns */
+    max-width: 1200px;       /* optional limit */
+    margin: 0 auto;          /* center horizontally */
+    padding: 20px;           /* optional padding */
+    box-sizing: border-box;
+    grid-template-rows: auto 1fr;   /* nav row and content row */
+}
+
+/* project page navigation spans full width */
+.project-nav {
+    grid-column: 1 / -1;
+    background: #111; /* match page bg or change */
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+}
+.project-nav p,h3 {
+    margin: 0;
+    margin-right: 10px;
+}
+.project-nav p {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(132, 132, 132);
+}
+.project-nav h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(209, 233, 249);
+}
+.project-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0 20px;
+    transition: color 0.3s;
+}
+.project-nav a:hover {
+    color: rgb(0, 157, 255);
+}
+
+.left-section,
+.right-section {
+    /* make sections fill their grid cells */
+    width: 100%;
+}
+
+/* left-section */
+.left-section .about-project {
+    border: solid 2px rgb(39, 39, 39);
+    border-radius: 15px;
+    padding: 15px;
+}
+.project-details {
+    margin-top: 20px;
+    border: solid 2px rgb(39, 39, 39);
+    border-radius: 15px;
+    padding: 15px;
+}
+.project-details h2 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.project-details ul {
+    list-style: none;
+    padding: 0;
+}
+.about-project h1 {
+    margin: 0;
+    margin-top: 5;
+    margin-bottom: 5px;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: solid 3px rgb(132, 132, 132);
+}
+.about-project p {
+    font-size: 18px;
+}
+.about-project .description h2 {
+    font-size: 18px;
+}
+
+.left-section .techno-used {
+    margin-top: 30px;
+    border: solid 2px rgb(39, 39, 39);
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.level-project {
+    margin-top: 20px;
+    border: solid 2px rgb(39, 39, 39);
+    border-radius: 15px;
+    padding: 15px;
+}
+.fa-html5 {
+    color: rgb(227, 76, 38);
+}
+.fa-css3-alt {
+    color: rgb(38, 77, 228);
+}
+.fa-js {
+    color: rgb(241, 224, 90);
+}
+.fa-react {
+    color: rgb(97, 218, 251);
+}
+.logo-techno i {
+    font-size: 40px;
+    margin-right: 20px;
+}
+
+/* .right-section */
+
+.right-section .project-image {
+    width: 100%;
+    border-radius: 15px;
+    border: solid 2px rgb(39, 39, 39);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.project-image img {
+    max-width: 100%;
+    max-height: 400px;
+    border-radius: 15px;
+}
+.objective {
+    margin-top: 30px;
+    border: solid 2px rgb(39, 39, 39);
+    border-radius: 15px;
+    padding: 15px;
+}

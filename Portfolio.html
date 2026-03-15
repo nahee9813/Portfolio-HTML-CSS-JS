@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <nav>
+        <div class="Logo-Portfolio">
+            <p>MY <span>PORTFOLIO</span></p>
+        </div>
+
+        <div class="nav-list">
+            <ul>
+                <li><a href="#header">หน้าหลัก</a></li>
+                <li><a href="#about">เกี่ยวกับฉัน</a></li>
+                <li><a href="#skills">สกิลของฉัน</a></li>
+                <li><a href="#projects">ข้อมูล portfolio</a></li>
+                <li><a href="#contact">ติดต่อ</a></li>
+            </ul>
+        </div>
+
+        <div class="Hire-me">
+            <a href="Contact.html"><button>จ้างผม</button></a>
+            <i class="fa-solid fa-pen js-pen"></i>
+        </div>
+    </nav>
+
+    <section id="header" class="Home-section" data-aos="fade-up"
+     data-aos-duration="3000">
+        <div class="Portfolio-Container">
+            <h1>สวัสดีครับ,ผมคือ<span class="js-name-random"></span></h1>
+            <p>ยินดีต้อนรับเข้าสู่เว็บไซต์ portfolio ของผมนะครับ เชิญเข้าดูผลงาน โปรเจกของผมได้ตามสบายเลยครับ และขอขอบคุณที่เข้ามาเยี่ยมชมเว็บของผมนะครับ
+            </p>
+            <a href=""><button class="contact-btn">ติดต่อฉัน</button></a>
+        </div>
+        
+
+        <div class="Profile-Image">
+            <div class="blur"></div>
+            <img src="Picture Portfolio Project (PPP).jpg" alt="">
+        </div>
+    </section>
+
+    
+    <section id="about" class="section1" data-aos="fade-up"
+     data-aos-duration="3000">
+     <h1 class="about-me">เกี่ยวกับฉัน</h1>
+        <div class="info">
+
+            <div class="hud-tilt" id="hud-tilt">
+    <div class="hud-inner" id="hud-inner">
+        <div class="hud-glare" id="hud-glare"></div>
+        <div class="hud-face">
+            <img src="about.jpg" alt="person image">
+            <div class="hud-bracket tl"></div>
+            <div class="hud-bracket tr"></div>
+            <div class="hud-bracket bl"></div>
+            <div class="hud-bracket br"></div>
+            <div class="hud-cross-h"></div>
+            <div class="hud-cross-v"></div>
+            <div class="hud-scan"></div>
+            <div class="hud-info">RES: 1920×1080<br>MODE: SCAN<br>LOCK: OK</div>
+        </div>
+    </div>
+</div>
+
+        <div class="person-info">
+            <p>สวัสดีครับ ผมมีชื่อว่า ธีรเดช อำลอย หรือชื่อเล่นว่า 'เดช' ครับ เว็บนี้จะถุกสร้างตอนที่ผมกำลังขึ้น ม.5 ครับ, ซึ่งเป็นเว็บแรกกของผมเลยครับ คือเว็บนี้ ผมเป็นคนที่ชอบเล่นเกม และอะไรที่เกี่ยวกับคอม ผมยังมีความสนใจในด้านการตัดต่อและนักออกแบบอีกด้วย</p>
+            <p>ขณะนี้ผมกำลังศึกษาอยู่ที่โรงเรียนสองพี่น้องวิทยา ผมอาศัยอยู่ในตำบลบ้านกุ่ม อำเภอสองพี่น้อง จังหวัดสุพรรณบุรี เคยศึกษาที่โรงเรียนวัดรางบัวทอง (สุวรรรวิทยา)</p>
+            <div class="school-img">
+                <img src="โรงเรียนสองพี่น้องวิทยา.jpg" alt="">
+                <span>สถานศึกษา</span>
+            </div>
+            <p>My approach to web development is centered around user experience. I believe that a well-designed website should not only look good but also be intuitive and easy to navigate. I am committed to staying up-to-date with the latest industry trends and best practices to ensure that my projects are modern and effective.</p>
+        </div>
+
+        </div>
+
+        
+        
+    </section>
+
+
+    <section id="skills" class="skill-section" data-aos="fade-up"
+     data-aos-duration="3000">
+        <h1>สกิลของฉัน</h1>
+        <div class="skills-container js-skills-container">
+                
+        </div>
+        
+    </section>
+
+    <section id="projects" class="projects-section" data-aos="fade-up"
+     data-aos-duration="3000">
+        <h1>ข้อมูล portfolio</h1>
+
+        <div class="filter-content">
+            <div class="filter-item js-filter-item active" data-filter="projects">Projects</div>
+            <div class="filter-item js-filter-item" data-filter="certifications">Certifications</div>
+        </div>
+
+        <div class="projects-container js-projects-container">
+
+
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+
+    </section>
+
+    <script type="module" src="Portfolio.js"></script>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
