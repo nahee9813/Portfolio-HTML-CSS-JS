@@ -1,26 +1,26 @@
 export const certificates = [
     {
-        certificImg: 'certificate.jpeg',
+        certificImg: 'portfolioImg-about/certificate.jpeg',
         about: `competition of coding`
     },
     {
-        certificImg: 'certificate.jpeg',
+        certificImg: 'portfolioImg-about/certificate.jpeg',
         about: `competition of coding`
     },
     {
-        certificImg: 'certificate.jpeg',
+        certificImg: 'portfolioImg-about/certificate.jpeg',
         about: `competition of coding`
     },
     {
-        certificImg: 'certificate.jpeg',
+        certificImg: 'portfolioImg-about/certificate.jpeg',
         about: `competition of coding`
     },
     {
-        certificImg: 'certificate.jpeg',
+        certificImg: 'portfolioImg-about/certificate.jpeg',
         about: `competition of coding`
     },
     {
-        certificImg: 'certificate.jpeg',
+        certificImg: 'portfolioImg-about/certificate.jpeg',
         about: `competition of coding`
     }
 ]
