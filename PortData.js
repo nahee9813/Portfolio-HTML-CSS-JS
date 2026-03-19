@@ -4,7 +4,7 @@ export const skills = [
     {
         name: "HTML",
         rating: 4,
-        iconClass: "fa-brands fa-html5",
+        iconClass: "fa-brands fa-html5 html",
         description: "Structure & semantic markup."
     },
     {
