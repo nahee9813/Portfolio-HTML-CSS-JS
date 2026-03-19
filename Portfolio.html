@@ -44,7 +44,7 @@
 
         <div class="Profile-Image">
             <div class="blur"></div>
-            <img src="Picture Portfolio Project (PPP).jpg" alt="">
+            <img src="portfolioImg-about/Picture Portfolio Project (PPP).jpg" alt="">
         </div>
     </section>
 
@@ -58,7 +58,7 @@
     <div class="hud-inner" id="hud-inner">
         <div class="hud-glare" id="hud-glare"></div>
         <div class="hud-face">
-            <img src="about.jpg" alt="person image">
+            <img src="portfolioImg-about/about.jpg" alt="person image">
             <div class="hud-bracket tl"></div>
             <div class="hud-bracket tr"></div>
             <div class="hud-bracket bl"></div>
@@ -75,7 +75,7 @@
             <p>สวัสดีครับ ผมมีชื่อว่า ธีรเดช อำลอย หรือชื่อเล่นว่า 'เดช' ครับ เว็บนี้จะถุกสร้างตอนที่ผมกำลังขึ้น ม.5 ครับ, ซึ่งเป็นเว็บแรกกของผมเลยครับ คือเว็บนี้ ผมเป็นคนที่ชอบเล่นเกม และอะไรที่เกี่ยวกับคอม ผมยังมีความสนใจในด้านการตัดต่อและนักออกแบบอีกด้วย</p>
             <p>ขณะนี้ผมกำลังศึกษาอยู่ที่โรงเรียนสองพี่น้องวิทยา ผมอาศัยอยู่ในตำบลบ้านกุ่ม อำเภอสองพี่น้อง จังหวัดสุพรรณบุรี เคยศึกษาที่โรงเรียนวัดรางบัวทอง (สุวรรรวิทยา)</p>
             <div class="school-img">
-                <img src="โรงเรียนสองพี่น้องวิทยา.jpg" alt="">
+                <img src="portfolioImg-about/โรงเรียนสองพี่น้องวิทยา.jpg" alt="">
                 <span>สถานศึกษา</span>
             </div>
             <p>My approach to web development is centered around user experience. I believe that a well-designed website should not only look good but also be intuitive and easy to navigate. I am committed to staying up-to-date with the latest industry trends and best practices to ensure that my projects are modern and effective.</p>
@@ -112,8 +112,98 @@
         </div>
     </section>
 
-    <section id="contact" class="contact-section">
+    <section id="contact" class="contact-section" data-aos="fade-up"
+     data-aos-duration="3000">
+            <div class="grid-contact">
 
+                <div class="contact-me-section">
+                <h2>Contact Me!</h2>
+                <p>have somthing that you are wondering? </p>
+                <div class="input-contact">
+                    <div class="name-input">
+                        <i class="fa-solid fa-circle-user name-icon"></i>
+                        <input class="name" type="text" placeholder="Your name">
+                    </div>
+                    
+                    <div class="email-input">
+                        <i class="fa-solid fa-envelope email-icon"></i>
+                        <input class="email" type="email" placeholder="Your email">
+                    </div>
+
+                    <div class="message-input">
+                        <i class="fa-solid fa-pen message-icon"></i>
+                        <input class="message" type="text" placeholder="Your message">
+                    </div>
+
+                    <button class="send-message"><span>Send Message</span></button>
+                </div>
+                <hr>
+                <div class="another-contact">
+                    <h2>Social Contact</h2>
+                    <p>Hover to see the information (Hover to see)</p>
+                    <div class="social-contact-container">
+                        <div id="facebook">
+                            <i class="fa-brands fa-facebook facebook"></i>
+                            <p class="Fb">ธีรเดช อำลอย</p>
+                        </div>
+
+                        <div id="ig">
+                            <i class="fa-brands fa-instagram ig"></i>
+                            <p class="Ig">ig:nongneemoo66</p>
+                        </div>
+
+                        <div id="line">
+                            <i class="fa-brands fa-line line"></i>
+                            <p class="Ln">ID: dech1201</p>
+                        </div>
+
+                        <div id="phone">
+                            <i class="fa-solid fa-phone phone"></i>
+                            <p class="Num">Num:0642704984</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+           <div class="panel">
+                <h2 class="panel-title">Comments</h2>
+                <p class="panel-sub">What do people say?</p>
+
+                <div class="count-badge">
+                    <span>💬</span>
+                    <span id="comment-count">3 comments</span>
+                </div>
+
+                <div class="comments-list" id="comments-list">
+                    
+                </div>
+
+                <hr class="divider" />
+
+                <p class="star-label">Your rating</p>
+                <div class="star-row">
+                    <button>Not bad</button>
+                    <button>Nice</button>
+                    <button>Good Job</button>
+                    <button>Excelent</button>
+                </div>
+
+                <div class="field">
+                    <span class="field-icon">👤</span>
+                    <input type="text" id="r-name" placeholder="Your name" />
+                </div>
+                <div class="field">
+                    <span class="field-icon">✏️</span>
+                    <textarea id="r-msg" rows="2" placeholder="Leave a comment..."></textarea>
+                </div>
+
+                <button class="btn-grad" onclick="postComment()">
+                    <span class="btn-label">Post Comment</span>
+                </button>
+            </div>
+
+            </div>
     </section>
 
     <script type="module" src="Portfolio.js"></script>
