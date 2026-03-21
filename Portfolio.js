@@ -290,20 +290,11 @@ hudEl.addEventListener('mouseleave', () => {
 
 // read more btn
 
+
 // แยก function read more ออกมา
 function initReadMore() {
   document.querySelectorAll('.js-comments-list .comment-card').forEach(card => {
     const p = card.querySelector('.name-comment p');
-
-     // เพิ่ม event ปุ่มลบตรงนี้
-    const deleteBtn = card.querySelector('.js-delete-btn');
-    if (deleteBtn) {
-      deleteBtn.addEventListener('click', () => {
-        card.remove();
-        saveComments();
-        updateCount();
-      });
-    }
     
     console.log('p:', p); // เจอ p ไหม
     console.log('btn already:', card.querySelector('.read-more-btn')); // มี btn อยู่แล้วไหม
@@ -398,7 +389,6 @@ function postComment () {
                                 <span class="name">${nameValue}</span>
                                 <span class="rating">rating: ${ratingValue}</span>
                             </div>
-                            <button class="delete-btn js-delete-btn">ลบ</button>
                         </div>
 
                         <p>${msgValue}</p>
