@@ -172,22 +172,45 @@
 
                 <div class="count-badge">
                     <span>💬</span>
-                    <span id="comment-count">3 comments</span>
+                    <span id="comment-count"></span>
                 </div>
 
-                <div class="comments-list" id="comments-list">
-                    
+                <div class="comments-list js-comments-list" >
+                   <div class="comment-card">
+                     <div class="profile-user">
+                        <img src="portfolioImg-about/user img.png" alt="user">
+                    </div>
+
+                    <div class="name-comment">
+                        <div class="rating-name">
+                            <div>
+                                <span class="name">jordon son</span>
+                                <span class="rating">rating: good</span>
+                            </div>
+                             <button class="delete-btn js-delete-btn">ลบ</button>
+                        </div>
+
+                        <p> Hello, dolor sit amet consectetur adipisicing  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis tempora totam accusantium quo ducimus doloribus ex eos, error tempore repudiandae impedit modi? Eos voluptatibus incidunt veritatis aspernatur deleniti eligendi debitis!</p>
+                        
+                    </div>
+                   
+                   </div>
+                   
+                   
                 </div>
 
                 <hr class="divider" />
 
-                <p class="star-label">Your rating</p>
-                <div class="star-row">
+                <p class="rating-label">Your rating</p>
+                
+                <div class="rating-row">
                     <button>Not bad</button>
                     <button>Nice</button>
                     <button>Good Job</button>
-                    <button>Excelent</button>
+                    <button>Excellent</button>
                 </div>
+
+
 
                 <div class="field">
                     <span class="field-icon">👤</span>
@@ -197,8 +220,8 @@
                     <span class="field-icon">✏️</span>
                     <textarea id="r-msg" rows="2" placeholder="Leave a comment..."></textarea>
                 </div>
-
-                <button class="btn-grad" onclick="postComment()">
+                
+                <button class="btn-grad">
                     <span class="btn-label">Post Comment</span>
                 </button>
             </div>
