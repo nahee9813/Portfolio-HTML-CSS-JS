@@ -285,3 +285,170 @@ hudEl.addEventListener('mouseleave', () => {
     hudInner.style.transform  = 'rotateX(0deg) rotateY(0deg) scale3d(1,1,1)';
     setTimeout(() => { hudInner.style.transition = 'transform 0.08s linear'; }, 500);
 });
+
+// comment section 
+
+// read more btn
+
+// แยก function read more ออกมา
+function initReadMore() {
+  document.querySelectorAll('.js-comments-list .comment-card').forEach(card => {
+    const p = card.querySelector('.name-comment p');
+
+     // เพิ่ม event ปุ่มลบตรงนี้
+    const deleteBtn = card.querySelector('.js-delete-btn');
+    if (deleteBtn) {
+      deleteBtn.addEventListener('click', () => {
+        card.remove();
+        saveComments();
+        updateCount();
+      });
+    }
+    
+    console.log('p:', p); // เจอ p ไหม
+    console.log('btn already:', card.querySelector('.read-more-btn')); // มี btn อยู่แล้วไหม
+
+    if (card.querySelector('.read-more-btn')) return;
+
+    const btn = document.createElement('button');
+    btn.className = 'read-more-btn';
+    btn.textContent = 'read more';
+
+    p.after(btn);
+    console.log('btn added'); // btn ถูกเพิ่มไหม
+
+    btn.addEventListener('click', () => {
+      console.log('clicked!'); // click ทำงานไหม
+      const isCollapsed = p.style.webkitLineClamp !== 'unset';
+      p.style.display = isCollapsed ? 'block' : '-webkit-box';
+      p.style.webkitLineClamp = isCollapsed ? 'unset' : '2';
+      btn.textContent = isCollapsed ? 'show less' : 'read more';
+    });
+  });
+}
+// count comment
+
+// update comment
+function updateCount() {
+  const count = document.querySelectorAll('.js-comments-list .comment-card').length;
+  document.querySelector('#comment-count').textContent = `${count} comment` ;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const comments = document.querySelectorAll('.js-comments-list .comment-card');
+  const count = comments.length;
+
+  // เปลี่ยน selector ให้ตรงกับ element count ของคุณ
+  document.querySelector('#comment-count').textContent = `${count} comment`;
+});
+
+// rating active when click
+  const btn = document.querySelectorAll('.rating-row button');
+
+  const activeBtn = (e) => {
+    btn.forEach(btn => btn.classList.remove('activeBTN'));
+    e.target.classList.add('activeBTN');
+  }
+
+  btn.forEach((button) => {
+    button.addEventListener('click', activeBtn);
+  });
+
+//  post comment
+
+
+
+function postComment () {
+
+    const postBtn = document.querySelector('.btn-grad')
+
+    postBtn.addEventListener('click', () => {
+        const btn = document.querySelectorAll('.rating-row button');
+        const nameInput = document.querySelector('#r-name')
+        const msgInput = document.querySelector('#r-msg')
+
+        const nameValue = nameInput.value
+        const msgValue = msgInput.value
+
+        if (!nameValue || !msgValue) return;
+
+        let ratingValue = ''
+        btn.forEach((button) => {
+            if(button.classList.contains('activeBTN')) {
+                ratingValue = button.textContent
+                button.classList.remove('activeBTN')
+            }
+        });
+
+        function getRandomColor() {
+        const colors = ['#e74c3c', '#3498db', '#2ecc71', '#f39c12', '#9b59b6', '#1abc9c', '#e67e22'];
+        return colors[Math.floor(Math.random() * colors.length)];
+        }
+
+
+            const GencommentHTML = `
+                <div class="comment-card">
+                     <div class="profile-user">
+                        <img style="background: ${getRandomColor()};" src="portfolioImg-about/user img.png" alt="user">
+                    </div>
+
+                    <div class="name-comment">
+                        <div class="rating-name">
+                            <div>
+                                <span class="name">${nameValue}</span>
+                                <span class="rating">rating: ${ratingValue}</span>
+                            </div>
+                            <button class="delete-btn js-delete-btn">ลบ</button>
+                        </div>
+
+                        <p>${msgValue}</p>
+                        
+                    </div>
+                </div>
+            `;
+
+            document.querySelector('.js-comments-list').insertAdjacentHTML('beforeend', GencommentHTML);
+            initReadMore();
+            saveComments();
+            updateCount();
+
+            nameInput.value = '';
+            msgInput.value = '';
+            });
+
+}
+
+
+// localStorage.clear()
+
+function saveComments() {
+  const comments = document.querySelector('.js-comments-list').innerHTML;
+  localStorage.setItem('comments', comments);
+}
+
+function loadComments() {
+  const saved = localStorage.getItem('comments');
+  if (saved) {
+    document.querySelector('.js-comments-list').innerHTML = saved;
+    
+    // ลบ read-more-btn ที่ save มาทั้งหมดออกก่อน
+    document.querySelectorAll('.read-more-btn').forEach(btn => btn.remove());
+    
+    // แล้วสร้างใหม่พร้อม event listener
+    initReadMore();
+    updateCount();
+  }
+}
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+loadComments();
+initReadMore()
+postComment();
+});
+
+postComment()
+
+
+
