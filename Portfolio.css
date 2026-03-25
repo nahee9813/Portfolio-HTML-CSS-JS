@@ -169,19 +169,37 @@ nav .nav-list ul li a.active::after {
 
 /* Header Part */
 
-.Home-section {
+.Port-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
     color: white;
     margin-top: 50px;
+    flex-wrap: wrap;
+}
+.Portfolio-Container {
+    align-items: start;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.mention-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.Portfolio-Container h1 {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: break-word;
 }
 .Home-section .Portfolio-Container span {
     color: rgb(0, 145, 255);
 }
-.Home-section .Portfolio-Container p {
+.Portfolio-Container p {
     width: 500px;
     font-size: 18px;
+    margin: 10px 0;
 }
 .Home-section .Profile-Image {
     width: 300px;
@@ -1129,8 +1147,11 @@ color: #aaa;
     display: block;
   }
 
-  .Home-section, .info {
+  .Port-container, .info {
     flex-direction: column;
+  }
+  .Portfolio-Container p {
+    width: auto;
   }
   .person-info {
     margin-top: 20px;
@@ -1152,7 +1173,7 @@ color: #aaa;
     display: block;
   }
 
-  .Home-section, .info {
+  .Port-container, .info {
     flex-direction: column;
   }
   .person-info {
