@@ -192,6 +192,7 @@ nav .nav-list ul li a.active::after {
     flex: 1;
     min-width: 0;
     overflow-wrap: break-word;
+    font-size: clamp(24px, 5vw, 40px);
 }
 .Home-section .Portfolio-Container span {
     color: rgb(0, 145, 255);
