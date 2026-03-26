@@ -636,13 +636,8 @@ nav .nav-list ul li a.active::after {
 
 /* certificate-section */
 
-.certificate-section {
-    width: 400px;
-    border: solid 2px white;
-}
 .certificate-section .cerificate-img {
-    width: 400px;
-    overflow: hidden;
+    max-width: 400px;
 }
 
 .certificate-section .cerificate-img img {
@@ -1166,9 +1161,8 @@ color: #aaa;
   }
     .person-text p {
         max-width: 100%;
-    } {
-        
-    }
+    } 
+    
   .person-info {
     margin-top: 20px;
   }
