@@ -8,7 +8,7 @@ body {
 
 .grid-project {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* two equal columns */
+    grid-template-columns: 1fr 1fr ; 
     gap: 20px;               /* space between columns */
     max-width: 1200px;       /* optional limit */
     margin: 0 auto;          /* center horizontally */
@@ -130,7 +130,6 @@ body {
 .right-section .project-image {
     width: 100%;
     border-radius: 15px;
-    border: solid 2px rgb(39, 39, 39);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,4 +144,13 @@ body {
     border: solid 2px rgb(39, 39, 39);
     border-radius: 15px;
     padding: 15px;
+}
+
+
+/* responsive */
+
+@media (max-width: 767px) {
+    .grid-project {
+        grid-template-columns: 1fr;
+    }
 }
