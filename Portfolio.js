@@ -67,13 +67,7 @@ document.querySelector('.js-projects-container').innerHTML += certificateHTML;
 
 const filterButtons = document.querySelectorAll('.js-filter-item');
 
-const filterCards = (e) => {
-    // update active button styling among filter controls only
-    filterButtons.forEach(btn => btn.classList.remove('active'));
-    e.target.classList.add('active');
-
-    // perform filtering of project/certificate items
-    const filter = e.target.dataset.filter;
+const filterCards = (filter) => {
     document.querySelectorAll('.projects-container > *').forEach(item => {
         // item may be project-items or certificate-section
         const name = item.dataset.name || '';
@@ -86,8 +80,17 @@ const filterCards = (e) => {
 }
 
 filterButtons.forEach((button) => {
-    button.addEventListener('click', filterCards);
+    button.addEventListener('click', (e) => {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        e.target.classList.add('active');
+        filterCards(e.target.dataset.filter)
+    });
 });
+
+if (filterButtons.length > 0) {
+    filterButtons[0].classList.add('active');
+    filterCards(filterButtons[0].dataset.filter);
+}
 
 /* Typing animation: types forward then deletes (loop) */
 (function typeAnimatedNames() {
